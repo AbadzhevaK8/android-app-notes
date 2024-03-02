@@ -3,6 +3,7 @@ package android.abadzheva.notes.DataBase;
 import android.abadzheva.notes.Models.Note;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
@@ -17,6 +18,9 @@ public interface MainDAO {
     @Query("SELECT * FROM notes ORDER BY id DESC")
     List<Note> getAll();
 
-
+    @Query("UPDATE notes SET title = :title, note = :note WHERE id = :id")
     void update(int id, String title, String note);
+
+    @Delete
+    void delete(Note note);
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Notes</string>
+    <string name="add_note_fab">Add note</string>
+    <string name="desc_pinned">Pinned</string>
 </resources>
