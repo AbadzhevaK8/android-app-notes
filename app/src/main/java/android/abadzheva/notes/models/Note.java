@@ -1,4 +1,4 @@
-package android.abadzheva.notes.Models;
+package android.abadzheva.notes.models;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

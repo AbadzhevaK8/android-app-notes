@@ -1,6 +1,6 @@
-package android.abadzheva.notes.DataBase;
+package android.abadzheva.notes.database;
 
-import android.abadzheva.notes.Models.Note;
+import android.abadzheva.notes.models.Note;
 import android.content.Context;
 
 import androidx.room.Database;
@@ -9,6 +9,7 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = Note.class, version = 1, exportSchema = false)
 public abstract class RoomDataBase extends RoomDatabase {
+
     private static RoomDataBase dataBase;
     private static final String DATABASE_NAME = "NotesApp";
 

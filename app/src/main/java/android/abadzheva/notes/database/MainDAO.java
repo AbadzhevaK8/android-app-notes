@@ -1,6 +1,6 @@
-package android.abadzheva.notes.DataBase;
+package android.abadzheva.notes.database;
 
-import android.abadzheva.notes.Models.Note;
+import android.abadzheva.notes.models.Note;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
