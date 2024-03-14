@@ -46,6 +46,9 @@ public class AddNewNoteActivity extends AppCompatActivity {
                 Toast.makeText(AddNewNoteActivity.this, "Please, add a note.", Toast.LENGTH_SHORT).show();
                 return;
             }
+            if (title.isEmpty()) {
+                title = "No title";
+            }
             SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyyy hh:mm", Locale.getDefault());
             Date date = new Date();
             note = new Note();

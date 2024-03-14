@@ -4,6 +4,7 @@ import android.abadzheva.notes.NoteClickListener;
 import android.abadzheva.notes.R;
 import android.abadzheva.notes.models.Note;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,18 +73,38 @@ public class NotesListAdapter extends RecyclerView.Adapter<NotesViewHolder> {
     }
 
     private int getRandomColor() {
-        List<Integer> colorCode = new ArrayList<>();
-        colorCode.add(R.color.note_color_1);
-        colorCode.add(R.color.note_color_2);
-        colorCode.add(R.color.note_color_3);
-        colorCode.add(R.color.note_color_4);
-        colorCode.add(R.color.note_color_5);
-        colorCode.add(R.color.note_color_6);
-        colorCode.add(R.color.note_color_7);
+        List<Integer> lightColorCode = new ArrayList<>();
+        List<Integer> darkColorCode = new ArrayList<>();
 
-        Random random = new Random();
-        int random_color = random.nextInt(colorCode.size());
-        return colorCode.get(random_color);
+        lightColorCode.add(R.color.light_note_color_1);
+        lightColorCode.add(R.color.light_note_color_2);
+        lightColorCode.add(R.color.light_note_color_3);
+        lightColorCode.add(R.color.light_note_color_4);
+        lightColorCode.add(R.color.light_note_color_5);
+        lightColorCode.add(R.color.light_note_color_6);
+        lightColorCode.add(R.color.light_note_color_7);
+
+        darkColorCode.add(R.color.dark_note_color_1);
+        darkColorCode.add(R.color.dark_note_color_2);
+        darkColorCode.add(R.color.dark_note_color_3);
+        darkColorCode.add(R.color.dark_note_color_4);
+        darkColorCode.add(R.color.dark_note_color_5);
+        darkColorCode.add(R.color.dark_note_color_6);
+        darkColorCode.add(R.color.dark_note_color_7);
+
+        int color;
+        if (isDarkTheme(context)) {
+            color = darkColorCode.get(new Random().nextInt(darkColorCode.size()));
+        } else {
+            color = lightColorCode.get(new Random().nextInt(lightColorCode.size()));
+        }
+        return color;
+    }
+
+    private boolean isDarkTheme(Context context) {
+        int nightModeFlags = context.getResources().getConfiguration().uiMode &
+                Configuration.UI_MODE_NIGHT_MASK;
+        return nightModeFlags == Configuration.UI_MODE_NIGHT_YES;
     }
 
     @Override

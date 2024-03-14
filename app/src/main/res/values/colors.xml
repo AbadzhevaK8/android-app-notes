@@ -61,12 +61,19 @@
     <color name="md_theme_dark_surfaceTint">#B4C5FF</color>
     <color name="md_theme_dark_outlineVariant">#45464F</color>
     <color name="md_theme_dark_scrim">#000000</color>
-    <color name="note_color_1">#80DEEA</color>
-    <color name="note_color_2">#81D4FA</color>
-    <color name="note_color_3">#90CAF9</color>
-    <color name="note_color_4">#9FA8DA</color>
-    <color name="note_color_5">#C5E1A5</color>
-    <color name="note_color_6">#A5D6A7</color>
-    <color name="note_color_7">#80CBC4</color>
+    <color name="light_note_color_1">#80DEEA</color>
+    <color name="light_note_color_2">#81D4FA</color>
+    <color name="light_note_color_3">#90CAF9</color>
+    <color name="light_note_color_4">#9FA8DA</color>
+    <color name="light_note_color_5">#C5E1A5</color>
+    <color name="light_note_color_6">#A5D6A7</color>
+    <color name="light_note_color_7">#80CBC4</color>
+    <color name="dark_note_color_1">#4527A0</color>
+    <color name="dark_note_color_2">#283593</color>
+    <color name="dark_note_color_3">#1565C0</color>
+    <color name="dark_note_color_4">#0277BD</color>
+    <color name="dark_note_color_5">#00838F</color>
+    <color name="dark_note_color_6">#00695C</color>
+    <color name="dark_note_color_7">#2E7D32</color>
 
 </resources>

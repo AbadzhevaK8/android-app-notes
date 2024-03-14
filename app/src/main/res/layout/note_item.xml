@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="8dp">
 
     <LinearLayout
@@ -25,8 +26,6 @@
                 android:ellipsize="marquee"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:padding="8dp"
-                android:scrollHorizontally="true"
-                android:singleLine="true"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tool:text="Title" />
@@ -46,10 +45,8 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
-            android:maxLines="10"
+            android:maxLines="7"
             android:padding="8dp"
-            android:scrollHorizontally="true"
-            android:singleLine="true"
             android:textSize="14sp"
             android:textStyle="normal"
             tool:text="Example note text" />
@@ -64,7 +61,6 @@
             android:padding="8dp"
             android:scrollHorizontally="true"
             android:singleLine="true"
-            android:textColor="?attr/colorSecondary"
             android:textSize="14sp"
             android:textStyle="normal"
             tool:text="12.34.5678" />

@@ -50,6 +50,6 @@
         android:padding="8dp"
         android:textSize="18sp"
         android:importantForAutofill="no"
-        android:inputType="text" />
+        android:inputType="textMultiLine" />
 
 </LinearLayout>
