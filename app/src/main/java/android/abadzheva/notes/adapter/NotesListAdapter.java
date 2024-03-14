@@ -54,19 +54,36 @@ public class NotesListAdapter extends RecyclerView.Adapter<NotesViewHolder> {
         }
         int colorForCard = getRandomColor();
         holder.noteItemContainer.setCardBackgroundColor(holder.itemView.getResources().getColor(colorForCard, null));
+
+        holder.noteItemContainer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onClick(list.get(holder.getAdapterPosition()));
+            }
+        });
+
+        holder.noteItemContainer.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                listener.onLongClick(list.get(holder.getAdapterPosition()), holder.noteItemContainer);
+                return true;
+            }
+        });
     }
 
     private int getRandomColor() {
         List<Integer> colorCode = new ArrayList<>();
-        colorCode.add(R.color.color1);
-        colorCode.add(R.color.color2);
-        colorCode.add(R.color.color3);
-        colorCode.add(R.color.color4);
-        colorCode.add(R.color.color5);
-        colorCode.add(R.color.color6);
-        colorCode.add(R.color.color7);
+        colorCode.add(R.color.note_color_1);
+        colorCode.add(R.color.note_color_2);
+        colorCode.add(R.color.note_color_3);
+        colorCode.add(R.color.note_color_4);
+        colorCode.add(R.color.note_color_5);
+        colorCode.add(R.color.note_color_6);
+        colorCode.add(R.color.note_color_7);
+
         Random random = new Random();
-        return random.nextInt(colorCode.size());
+        int random_color = random.nextInt(colorCode.size());
+        return colorCode.get(random_color);
     }
 
     @Override
