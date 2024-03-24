@@ -23,4 +23,7 @@ public interface MainDAO {
 
     @Delete
     void delete(Note note);
+
+    @Query("UPDATE notes SET pinned = :pin WHERE id = :id")
+    void pin(int id, boolean pin);
 }
